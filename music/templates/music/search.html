@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+<head><title>New Recipe</title></head>
+<body>
+<h1>search</h1>
+
+<form action="add/" method="post">
+{% csrf_token  %}
+
+<label>artist or track or album<label>
+<input type="text" name="search"></input><br />
+<br />
+</form>
+</body>
+</html>
