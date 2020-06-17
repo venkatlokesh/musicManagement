@@ -1,0 +1,30 @@
+<!-- html page for uploading a song using form-->
+<!DOCTYPE html>
+
+<html>
+
+<body>
+<ul>
+   
+    
+	<li ><a href='/songs/'>view ur songs</a></li>
+   <li class='active'><a href='#'>upload ur song</a></li>
+   <li><a href='/searchpage/'>search</a></li>
+</ul><h1>add ur song here</h1>
+
+<form action="add/" method="post">
+{% csrf_token  %}
+
+<label>artist name<label>
+<input type="text" name="artist_name"></input><br />
+<label>album name<label>
+<input type="text" name="album_name"></input><br />
+<label>song name<label>
+<input type="text" name="song_title"></input><br />
+<label>song url<label>
+<input type="text" name="audio_url"></input><br />
+<input type="submit" value="upload">
+<br />
+</form>
+</body>
+</html>

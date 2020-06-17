@@ -1,16 +1,26 @@
+<!--html page of search using form-->
 <!DOCTYPE html>
 
 <html>
-<head><title>New Recipe</title></head>
+
 <body>
+<ul>
+   
+    
+	<li ><a href='/songs/'>view ur songs</a></li>
+   <li><a href='/songupload/'>upload ur song</a></li>
+   <li><class='active'><a href='#'>search</a></li>
+</ul>
 <h1>search</h1>
 
-<form action="add/" method="post">
+<form action="search/" method="post">
 {% csrf_token  %}
 
 <label>artist or track or album<label>
 <input type="text" name="search"></input><br />
 <br />
 </form>
+
+
 </body>
 </html>

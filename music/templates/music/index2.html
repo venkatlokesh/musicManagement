@@ -1,10 +1,27 @@
+<!--html page for displaying all songs -->
 <html>
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
+<ul>
+   
+    
+	<li class='active'><a href='#'>view ur songs</a></li>
+   <li><a href='/songupload/'>upload ur song</a></li>
+   <li><a href='/searchpage/'>search</a></li>
+</ul>
 {% for i,j,k,l in mylist %}
 	<table><tr>
 	<td>{{i}}</td>
 	<td>{{j}}</td>
-	<td><a href="{{l}}">{{k}}</a></td>
+	<td>{{k}}</td>
+	<td><a href ="/play/{{l}}"><button style="font-size:24px"> <i class="fa fa-play-circle"></i></button></a>
+</td>
+
+<td><a href ="/delete/{{l}}"><button style="font-size:24px"> <i class="fa fa-close"></i></button></a></td>
 	</tr></table>
 {% endfor %}
 </body>
